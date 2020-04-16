@@ -30,7 +30,7 @@ If `mongod` didn’t run and instead, your Bash threw a “command not found” 
 If mongod starts but closes after a series of prompts, make sure you created the /data/db directory in your root. MongoDB cannot run without this directory.
 
 ## Web Inspector
-Inspect the website to get an idea what piece of data needed to be collected. In this case, I chose to collect the article headlines.
+Inspect the webpage structure to get an idea what piece of data needed to be collected. In this case, I chose to collect the article headlines.
 ## Automate Web Browser and Perform Web Scrape
 
 
@@ -47,37 +47,13 @@ Explain what these tests test and why
 Give an example
 ```
 
-## Data extraction
-The web scraping process is automated using programming script. By using automated web scraping, companies can gather information from different sources in seconds.
-Define web page structure
-Writing Python script with Splinter and BeautifulSoup
-Store data using MongoDB (noSQL database, messy data, data that does not have any relationship to any data, using json data structure, fast and efficient, relate to task we are using, 
-build a web app using flask (button to execute scraping code and update the data on the home page)
-### MongoDB
-
-
-
-Final Scraping Website:
-
-
+Final Scraping Website:<br><br>
 ![webpage](https://github.com/Thinguyen23/Thi_Mission_to_Mars/blob/master/apps/images/webpage.png)
 ## Tools used
 - Use Chrome Developer Tools to identify HTML components
 - Use BeautifulSoup, Splinter and ChromeDriver to automate the scrape
-```
-To install Splinter, run `pip install splinter`
-To install BeautifulSoup, run `pip install bs4`
-```
 - Use Mongo to store data
 - Use flask to display
-
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
 ## Authors
 
 * **Thi Nguyen** - [ThiNguyen23](https://github.com/Thinguyen23)
