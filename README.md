@@ -102,7 +102,7 @@ if __name__ == "__main__":
  
 A shot of final Scraping Website:<br><br>
 <p align="center">
-   <img src="https://github.com/Thinguyen23/Thi_Mission_to_Mars/blob/master/apps/images/webpage.png" width=75%>
+   <img src="https://github.com/Thinguyen23/Thi_Mission_to_Mars/blob/master/apps/images/webpage.png" width=79%>
 </p>
                                                                                                            
 ## Tools used
@@ -111,7 +111,7 @@ A shot of final Scraping Website:<br><br>
 - MongoDB to store data
 - Flask to display
 ## Authors
-* **Thi Nguyen** - [Thinguyen23](https://github.com/Thinguyen23)
+* **Thi Nguyen** - [Thinguyen23](https://www.linkedin.com/in/thinguyen23/)
 ## Copyright
 © 2019 Trilogy Education Services. All Rights Reserved.
 
