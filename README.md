@@ -1,6 +1,6 @@
 # :full_moon: Mission to Mars :full_moon:
 In this project, I built a Python Flask app that automatically collects data from online webpages and store the data scraped in a non-relational database for further use and analysis. The data is then display on a dynamic website. Users interact with page by pressing button to update data. 
-As the title of this project, I scraped data from [NASA news on Mars website](https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest) 
+As the title of this project, I collect data on Mars from [NASA website](https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest) 
 ## Getting Started
 Web scraping bot is a time-saver. But there will be several tools you need to install in order to get the app up and running.
 
@@ -21,40 +21,51 @@ For macOS computers, follow instructions in [MongoDB official documentation](htt
 * Add a data directory to root by first navigating to root directory. Then make a directory with command `mkdir -p data/db`. This is the default location for Mongo's databases.
 * Add MongoDb's Path to PATH environment variables so that you can run and launch MongoDB from the Bash command line. Path will look like this `C:\\Program Files\\MongoDB\\Server\\\\bin`
 
-### Running the tests
+#### Test MongoDB
 
 To test if you have sucessfully installed MongoDB, reopen a Git Bash window and run `mongod`. If Mongo continues to run in the terminal, it’s been successfully installed—great job!
 
-If `mongod` didn’t run and instead, your Bash threw a “command not found” error, make sure you added MongoDB’s bin directory to your PATH variable.
+If `mongod` didn’t run and instead, your Bash threw a `command not found` error, make sure you added MongoDB’s bin directory to your PATH variable.
 
 If mongod starts but closes after a series of prompts, make sure you created the /data/db directory in your root. MongoDB cannot run without this directory.
 
 ## Web Inspector
-Inspect the webpage structure to get an idea what piece of data needed to be collected. In this case, I chose to collect the article headlines.
+Inspect the Nasa webpage structure to get an idea what data needed to be collected. With some knowledge on HTML, you can easily identify the piece of information needed to be collected. In this case, I chose to collect the article headlines.
 ## Automate Web Browser and Perform Web Scrape
+```
+# Import Splinter and BeautifulSoup
+from splinter import Browser
+from bs4 import BeautifulSoup
 
+# Set the executable path and initialize the chrome browser in splinter
+executable_path = {‘executable_path’: ‘chromedriver’}
+browser = Browser('chrome', **executable_path)
 
+# Visit the mars nasa news site
+url = 'https://mars.nasa.gov/news/'
+browser.visit(url)
+# Optional delay for loading the page -- tell browser to wait for a second before searching for components
+browser.is_element_present_by_css("ul.item_list li.slide", wait_time=1)
 
+# Set up HTML parser
+html = browser.html
+news_soup = BeautifulSoup(html, 'html.parser')
+```
+Visit [BeautifulSoup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) and start web scraping!
+## Data Storage
 ```
 Give an example
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
+## Web display
 Final Scraping Website:<br><br>
 ![webpage](https://github.com/Thinguyen23/Thi_Mission_to_Mars/blob/master/apps/images/webpage.png)
 ## Tools used
-- Use Chrome Developer Tools to identify HTML components
-- Use BeautifulSoup, Splinter and ChromeDriver to automate the scrape
-- Use Mongo to store data
-- Use flask to display
+- Chrome Developer Tools to identify HTML components
+- BeautifulSoup, Splinter and ChromeDriver to automate the scrape
+- MongoDB to store data
+- Flask to display
 ## Authors
-
 * **Thi Nguyen** - [ThiNguyen23](https://github.com/Thinguyen23)
+## Copyright
+© 2019 Trilogy Education Services. All Rights Reserved.
 
