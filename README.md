@@ -32,7 +32,7 @@ If mongod starts but closes after a series of prompts, make sure you created the
 ## Web Inspector
 Inspect the Nasa webpage structure to get an idea what data needed to be collected. Open the page inspector and identify the piece of information needed to be collected. In this case, I chose to collect the article headlines.
 <p align="center">
-   <img scr="https://github.com/Thinguyen23/Thi_Mission_to_Mars/blob/master/apps/images/rawpage.png" width=35%>
+   <img src="https://github.com/Thinguyen23/Thi_Mission_to_Mars/blob/master/apps/images/rawpage.png" width=75%>
 </p>
  
 ## Automate Web Browser and Perform Web Scrape
@@ -102,7 +102,7 @@ if __name__ == "__main__":
  
 A shot of final Scraping Website:<br><br>
 <p align="center">
-   <img scr="https://github.com/Thinguyen23/Thi_Mission_to_Mars/blob/master/apps/images/rawpage.png" width=75%>
+   <img src="https://github.com/Thinguyen23/Thi_Mission_to_Mars/blob/master/apps/images/webpage.png" width=75%>
 </p>
                                                                                                            
 ## Tools used
